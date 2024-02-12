@@ -42,9 +42,9 @@ const Demo = () => {
 
       <button type="submit" 
       className="submit_btn 
-      peer-fpcus:border-gray-700
-       peer-focus:gray-700">
-      The enter icon
+      peer-focus:border-gray-700
+       peer-focus:text-gray-700">
+      @ 
       </button>
       </form>
 
