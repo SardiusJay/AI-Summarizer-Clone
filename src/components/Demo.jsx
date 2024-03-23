@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 
-import {linkIcon} from '../assets';
+import { copy, linkIcon, loader, tick } from '../assets';
+import { useLazyGetSummaryQuery } from '../services';
+
 
 const Demo = () => {
   const [article, setArticle] = useState({
