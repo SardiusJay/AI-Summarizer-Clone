@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import { copy, linkIcon, loader, tick } from '../assets';
-import { useLazyGetSummaryQuery } from '../services';
+import { useLazyGetSummaryQuery } from '../services/article';
 
 
 const Demo = () => {
@@ -9,6 +9,8 @@ const Demo = () => {
     url: '',
     summary: '',
   });
+
+  const [getSummary, { error, isFetching}] = useLazyGetSummaryQuery();
 
   const handleSubmit = async (e) => {
    alert('Submitted');
@@ -35,7 +37,7 @@ const Demo = () => {
       placeholder="Enter a URL"
       value={article.url}
       onChange={(e) => setArticle({...
-        article, url: e.target.value})}
+        article, url: e.target.value })}
 
   
       required
